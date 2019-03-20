@@ -1,13 +1,28 @@
 {
-  "name": "star-rating",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-rating-it",
+  "version": "0.1.5",
+  "private": false,
+  "keywords": [
+    "vue",
+    "vue2",
+    "star",
+    "rating",
+    "grade",
+    "score"
+  ],
+  "description": "A simple, customisable rating component for vue 2.x.",
+  "author": "Vicco Wang <viccowang@hotmail.com> (https://blog.vicco) && Yuki <542711664@qq.com>",
+  "main": "dist/vue-rating-it.common.js",
+  "repository": "https://github.com/viccowang/vue-rating-it.git",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build ",
+    "build-lib": "vue-cli-service build --target lib ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "vue": "^2.6.6"
   },
   "devDependencies": {

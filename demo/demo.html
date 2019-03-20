@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>star rating demo</title>
+  <style>
+    #app {
+      padding:0;
+      margin:0;
+      display: flex;
+      justify-content: center;
+    }
+    .wrapper {
+      width:500px;
+      display: inherit;
+      flex-direction: column;
+      margin-top:150px;
+      border: 2px solid #f2f2f2;
+      border-radius:8px;
+    }
+    .wrapper h2 {
+      text-align: center;
+    }
+    .wrapper .rating {
+      margin:10px 0;
+      justify-content: center;
+      clear:both;
+    }
+    .wrapper .rate {
+      text-align: center
+    }
+    .rate span {
+      font-size:2rem;
+      font-weight: 600;
+      color: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+    <div class="wrapper">
+        <h2>Star Rating</h2>
+        <!-- Star Rating comp -->
+        <vue-rating-it 
+          class="rating" 
+          :total="5"
+          :score="rate"
+          @rating="rating"
+        ></vue-rating-it>
+        <!-- -->
+        <div class="rate">rate: <span>{{ rate }}</span></div>
+    </div>
+</div> 
+
+<script src="vue.min.js"></script>
+<script src="../dist/vue-rating-it.umd.min.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
